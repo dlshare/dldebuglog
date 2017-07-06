@@ -4,5 +4,6 @@
     <mapping directory="" vcs="svn" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/debuglog" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/lib-test" vcs="svn" />
   </component>
 </project>

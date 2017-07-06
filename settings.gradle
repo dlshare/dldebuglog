@@ -1,1 +1,1 @@
-include ':app', ':debuglog'
+include ':app', ':debuglog', ':lib-test'
