@@ -1,4 +1,20 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'//添加
+publish {
+    repoName = 'dlshare'//远程仓库名字,不指明，默认是上传到maven
+    userOrg = 'dlshare'//bintray.com的用户名
+    groupId = 'com.dlshare'//jcenter上的路径
+    artifactId = 'dldebuglog'//项目名称
+    publishVersion = '0.1'//版本号
+    desc = '一个在Debug模式下利用aspectj库进行切面编程进行日志代码的插入，通过注解触发，查看函数调用顺序、耗时、运行线程等操作的调试工具。'//描述，不重要
+    website = 'https://github.com/dlshare/dldebuglog'//项目主页
+}
+tasks.withType(Javadoc) {//防止编码问题
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
